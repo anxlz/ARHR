@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Share from './Share';
 import Viewer from './Viewer';
-import { asset, S, Lang, VIDEO_POSTER, VIDEO_SRC } from '../lib/i18n';
+import { asset, S, Lang, VIDEO_POSTER, VIDEO_SRC, HERO_SRC } from '../lib/i18n';
 
 type Mode = 'presentation' | 'video';
 export default function App() {
@@ -41,7 +41,7 @@ export default function App() {
 
       <section className="hero" aria-labelledby="h1">
         <video ref={hero} className="bg" autoPlay muted loop playsInline preload="metadata" poster={asset(VIDEO_POSTER)} aria-hidden="true" tabIndex={-1}>
-          <source src={asset(VIDEO_SRC)} type="video/mp4" />
+          <source src={asset(HERO_SRC)} type="video/mp4" />
         </video>
         <div className="shade" />
         <div className="copy">
