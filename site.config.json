@@ -1,4 +1,4 @@
 {
-  "publicUrl": "https://REPLACE-WITH-FINAL-URL.example/",
-  "productionReady": false
+  "publicUrl": "https://asu-arhr.vercel.app/",
+  "productionReady": true
 }
