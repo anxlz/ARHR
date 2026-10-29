@@ -1,8 +1,10 @@
 export type Lang = 'ar' | 'en';
 export const SLIDES = 16;
 const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-export const asset = (p: string) => base + p;
-export const VIDEO_SRC = '/video/hero.mp4';
+export const asset = (p: string) => (/^https?:\/\//.test(p) ? p : base + p);
+// Video mode player (full quality) and hero background (lighter), hosted on Cloudinary
+export const VIDEO_SRC = 'https://res.cloudinary.com/zir08enc/video/upload/q_auto/hero.mp4';
+export const HERO_SRC = 'https://res.cloudinary.com/zir08enc/video/upload/q_auto,w_1280/hero.mp4';
 export const VIDEO_POSTER = '/video/hero-poster.jpg';
 export const slideSrc = (i: number) => asset(`/slides/slide-${String(i + 1).padStart(2, '0')}.jpg`);
 export const S = {
